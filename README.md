@@ -11,3 +11,5 @@ The website lives in `docs/` and can be published through GitHub Pages by select
 - Folder: `/docs`
 
 See `docs/PUBLISHING.md` for publishing notes.
+
+The `code/` directory is a placeholder for the project implementation.
