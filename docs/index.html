@@ -21,7 +21,6 @@
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
@@ -32,34 +31,19 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a class="navbar-item" href="#">
-      <span class="icon">
-        <i class="fas fa-home"></i>
-      </span>
-    </a>
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
+      <span class="icon"><i class="fas fa-home"></i></span>
     </a>
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          Project
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="#abstract">Abstract</a>
-          <a class="navbar-item" href="#method">Method</a>
-          <a class="navbar-item" href="#video">Video</a>
-          <a class="navbar-item" href="#results">Results</a>
-          <a class="navbar-item" href="#BibTeX">BibTeX</a>
-        </div>
-      </div>
+      <a class="navbar-item" href="#abstract">Abstract</a>
+      <a class="navbar-item" href="#video">Video</a>
+      <a class="navbar-item" href="#method">Method</a>
+      <a class="navbar-item" href="#results">Results</a>
+      <a class="navbar-item" href="#BibTeX">BibTeX</a>
     </div>
   </div>
 </nav>
-
 
 <section class="hero">
   <div class="hero-body">
@@ -68,17 +52,23 @@
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">VideoNeuMat: Neural Material Extraction from Generative Video Models</h1>
           <h2 class="subtitle is-4 publication-venue">SIGGRAPH 2026</h2>
+
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="mailto:bowen.xue@manchester.ac.uk">Bowen Xue</a><sup>1,*</sup>,</span>
+              <a href="mailto:bowen.xue@manchester.ac.uk">Bowen Xue</a><sup>1,*</sup>,
+            </span>
             <span class="author-block">
-              <a href="mailto:shadadan@nvidia.com">Saeed Hadadan</a><sup>2,*</sup>,</span>
+              <a href="mailto:shadadan@nvidia.com">Saeed Hadadan</a><sup>2,*</sup>,
+            </span>
             <span class="author-block">
-              <a href="mailto:zhengzeng@ucsb.edu">Zheng Zeng</a><sup>3,2</sup>,</span>
+              <a href="mailto:zhengzeng@ucsb.edu">Zheng Zeng</a><sup>3,2</sup>,
+            </span>
             <span class="author-block">
-              <a href="mailto:frousselle@nvidia.com">Fabrice Rousselle</a><sup>2</sup>,</span>
+              <a href="mailto:frousselle@nvidia.com">Fabrice Rousselle</a><sup>2</sup>,
+            </span>
             <span class="author-block">
-              <a href="mailto:zahra.montazeri@manchester.ac.uk">Zahra Montazeri</a><sup>1</sup>,</span>
+              <a href="mailto:zahra.montazeri@manchester.ac.uk">Zahra Montazeri</a><sup>1</sup>,
+            </span>
             <span class="author-block">
               <a href="mailto:milos.hasan@gmail.com">Milo&scaron; Ha&scaron;an</a><sup>2</sup>
             </span>
@@ -93,53 +83,35 @@
             <span class="author-block"><sup>*</sup>Equal contribution</span>
           </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="assets/paper_web.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="assets/supplementary_web.pdf"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-lines"></i>
-                  </span>
-                  <span>Supplementary</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#video"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="#BibTeX"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-doi"></i>
-                  </span>
-                  <span>BibTeX</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <span class="button is-normal is-rounded is-dark is-static">
-                  <span class="icon">
-                    <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                </span>
-              </span>
-            </div>
+          <div class="publication-links">
+            <span class="link-block">
+              <a href="assets/paper_web.pdf"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                <span>Paper</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="assets/supplementary_web.pdf"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fas fa-file-lines"></i></span>
+                <span>Supplementary</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="#video"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="fab fa-youtube"></i></span>
+                <span>Video</span>
+              </a>
+            </span>
+            <span class="link-block">
+              <a href="#BibTeX"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon"><i class="ai ai-doi"></i></span>
+                <span>BibTeX</span>
+              </a>
+            </span>
           </div>
         </div>
       </div>
@@ -147,47 +119,19 @@
   </div>
 </section>
 
-
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline poster="assets/neumat_poster.jpg">
-        <source src="assets/neumat_overview.mp4"
-                type="video/mp4">
-      </video>
+      <figure class="teaser-figure">
+        <img src="assets/original/teaser_hero.jpg"
+             alt="VideoNeuMat representative neural material results.">
+      </figure>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">VideoNeuMat</span> turns generative material videos into reusable neural 3D assets.
+        <span class="dnerf">VideoNeuMat</span> generates realistic and diverse neural materials from text or image prompts.
       </h2>
     </div>
   </div>
 </section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <img src="assets/samples/teaser_leather.jpg"
-               alt="Pebble-grain leather neural material rendered on cloth.">
-        </div>
-        <div class="item">
-          <img src="assets/samples/teaser_dragon.jpg"
-               alt="Embroidered dragon neural material rendered on cloth.">
-        </div>
-        <div class="item">
-          <img src="assets/samples/teaser_jute.jpg"
-               alt="Jute neural material rendered on cloth.">
-        </div>
-        <div class="item">
-          <img src="assets/samples/tileable_projection.jpg"
-               alt="Tileable material projection examples.">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 
 <section class="section" id="abstract">
   <div class="container is-max-desktop">
@@ -204,34 +148,36 @@
           <p>
             We present <span class="dnerf">VideoNeuMat</span>, a two-stage pipeline that extracts
             reusable neural material assets from video diffusion models. First, we finetune a large
-            video model (Wan 2.1 14B) to generate material sample videos under controlled camera and
-            lighting trajectories, effectively creating a virtual gonioreflectometer that preserves
-            the model's material realism while learning a structured measurement pattern.
+            video model to generate material sample videos under controlled camera and lighting
+            trajectories, effectively creating a virtual gonioreflectometer that preserves the
+            model's material realism while learning a structured measurement pattern.
           </p>
           <p>
             Second, we reconstruct compact neural materials from these videos through a Large
-            Reconstruction Model (LRM) finetuned from a smaller Wan 1.3B video backbone. From 17
-            generated video frames, our LRM performs single-pass inference to predict neural material
+            Reconstruction Model. From generated video frames, our model predicts neural material
             parameters that generalize to novel viewing and lighting conditions.
           </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered has-text-centered" id="video">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video local-video">
-          <video controls playsinline preload="metadata" poster="assets/neumat_poster.jpg">
-            <source src="assets/neumat_overview.mp4"
-                    type="video/mp4">
-          </video>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section" id="video">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video local-video">
+          <video controls playsinline preload="metadata" poster="assets/neumat_poster.jpg">
+            <source src="assets/neumat_overview.mp4" type="video/mp4">
+          </video>
+        </div>
+        <p class="video-note">Supplementary video excerpt, 00:06-02:36.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="method">
   <div class="container is-max-desktop">
@@ -242,133 +188,232 @@
           <p>
             <span class="dnerf">VideoNeuMat</span> first adapts a video diffusion model into a
             structured material-video generator, then distills the generated measurements into a
-            compact neural material representation that supports rendering under new views and lights.
+            compact neural material representation for relighting and rendering on new geometry.
           </p>
         </div>
-        <div class="publication-banner">
+        <figure class="publication-banner">
           <img src="assets/pipeline.jpg"
-               alt="Two-stage VideoNeuMat pipeline.">
-        </div>
-      </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Virtual Gonioreflectometer</h2>
-          <p>
-            A Wan 2.1 14B video model is finetuned to generate material videos under controlled
-            camera and light trajectories, making its material prior observable through a structured
-            measurement pattern.
-          </p>
-          <img class="rounded-media" src="assets/neumat_poster.jpg"
-               alt="Generated, reconstructed, and novel view material comparison.">
-        </div>
-      </div>
-
-      <div class="column">
-        <h2 class="title is-3">Material LRM</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              A feed-forward LRM reconstructs neural material parameters from 17 generated frames,
-              producing assets that can be relit and applied to novel geometry.
-            </p>
-            <img class="rounded-media" src="assets/samples/teaser_dragon.jpg"
-                 alt="Recovered neural material on cloth with offset visualization.">
-          </div>
-        </div>
+               alt="The two-stage VideoNeuMat pipeline from the paper.">
+        </figure>
       </div>
     </div>
   </div>
 </section>
 
-
 <section class="section" id="results">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Results</h2>
-        <div class="content has-text-justified">
-          <p>
-            The reconstructed neural materials preserve rich appearance detail while generalizing
-            from training views to novel views and lighting.
-          </p>
-        </div>
 
-        <div class="columns is-multiline results-grid">
-          <div class="column is-half">
-            <div class="result-card">
-              <div class="paired-images">
-                <img src="assets/samples/corroded_train.jpg"
-                     alt="Training view rendering of corroded steel.">
-                <img src="assets/samples/corroded_val.jpg"
-                     alt="Novel view rendering of corroded steel.">
-              </div>
-              <p>Corroded steel, salt deposits, rust <span>train / novel view</span></p>
-            </div>
+        <h3 class="title is-4">Single Image to Material</h3>
+        <div class="result-table">
+          <div class="result-row result-header">
+            <span>Input</span>
+            <span>CHORD</span>
+            <span>MatFusion</span>
+            <span>Ours</span>
+            <span>GT</span>
+            <span>Ours LRM</span>
           </div>
-          <div class="column is-half">
-            <div class="result-card">
-              <div class="paired-images">
-                <img src="assets/samples/beeswax_train.jpg"
-                     alt="Training view rendering of beeswax.">
-                <img src="assets/samples/beeswax_val.jpg"
-                     alt="Novel view rendering of beeswax.">
-              </div>
-              <p>Beeswax with hexagonal cells <span>train / novel view</span></p>
-            </div>
+          <div class="result-row">
+            <img src="assets/original/i2t/scifi_input.jpg" alt="Sci-fi panel input.">
+            <img src="assets/original/i2t/scifi_chord.jpg" alt="CHORD result for sci-fi panel.">
+            <img src="assets/original/i2t/scifi_matfusion.jpg" alt="MatFusion result for sci-fi panel.">
+            <img src="assets/original/i2t/scifi_our_full.jpg" alt="VideoNeuMat result for sci-fi panel.">
+            <img src="assets/original/i2t/scifi_gt.jpg" alt="Ground truth sci-fi panel.">
+            <img src="assets/original/i2t/scifi_our_lrm.jpg" alt="VideoNeuMat LRM result for sci-fi panel.">
           </div>
-          <div class="column is-half">
-            <div class="result-card">
-              <div class="paired-images">
-                <img src="assets/samples/redrock_train.jpg"
-                     alt="Training view rendering of red rock cliff.">
-                <img src="assets/samples/redrock_val.jpg"
-                     alt="Novel view rendering of red rock cliff.">
-              </div>
-              <p>Red rock cliff <span>train / novel view</span></p>
-            </div>
-          </div>
-          <div class="column is-half">
-            <div class="result-card">
-              <div class="paired-images">
-                <img src="assets/samples/embroidery_train.jpg"
-                     alt="Training view rendering of embroidery.">
-                <img src="assets/samples/embroidery_val.jpg"
-                     alt="Novel view rendering of embroidery.">
-              </div>
-              <p>Contemporary machine embroidery <span>train / novel view</span></p>
-            </div>
+          <div class="result-row">
+            <img src="assets/original/i2t/rubble_input.jpg" alt="Rubble wall input.">
+            <img src="assets/original/i2t/rubble_chord.jpg" alt="CHORD result for rubble wall.">
+            <img src="assets/original/i2t/rubble_matfusion.jpg" alt="MatFusion result for rubble wall.">
+            <img src="assets/original/i2t/rubble_our_full.jpg" alt="VideoNeuMat result for rubble wall.">
+            <img src="assets/original/i2t/rubble_gt.jpg" alt="Ground truth rubble wall.">
+            <img src="assets/original/i2t/rubble_our_lrm.jpg" alt="VideoNeuMat LRM result for rubble wall.">
           </div>
         </div>
 
-        <h3 class="title is-4">Tileable Materials</h3>
-        <div class="content has-text-justified">
-          <p>
-            VideoNeuMat also supports optional tileable material generation and projection.
-          </p>
+        <h3 class="title is-4">Image to Video Materials</h3>
+        <div class="columns is-multiline material-triplets">
+          <div class="column is-one-third-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="triplet-images">
+                <img src="assets/original/i2v/AdobeStock_1228231055_input.jpg" alt="Input material image.">
+                <img src="assets/original/i2v/AdobeStock_1228231055_generated.jpg" alt="Generated video frame.">
+                <img src="assets/original/i2v/AdobeStock_1228231055_reconstructed.jpg" alt="Reconstructed material.">
+              </div>
+              <figcaption>Input / generated / reconstructed</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-third-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="triplet-images">
+                <img src="assets/original/i2v/AdobeStock_1667862821_input.jpg" alt="Input material image.">
+                <img src="assets/original/i2v/AdobeStock_1667862821_generated.jpg" alt="Generated video frame.">
+                <img src="assets/original/i2v/AdobeStock_1667862821_reconstructed.jpg" alt="Reconstructed material.">
+              </div>
+              <figcaption>Input / generated / reconstructed</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-third-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="triplet-images">
+                <img src="assets/original/i2v/AdobeStock_1847067713_input.jpg" alt="Input material image.">
+                <img src="assets/original/i2v/AdobeStock_1847067713_generated.jpg" alt="Generated video frame.">
+                <img src="assets/original/i2v/AdobeStock_1847067713_reconstructed.jpg" alt="Reconstructed material.">
+              </div>
+              <figcaption>Input / generated / reconstructed</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-third-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="triplet-images">
+                <img src="assets/original/i2v/AdobeStock_1860915269_input.jpg" alt="Input material image.">
+                <img src="assets/original/i2v/AdobeStock_1860915269_generated.jpg" alt="Generated video frame.">
+                <img src="assets/original/i2v/AdobeStock_1860915269_reconstructed.jpg" alt="Reconstructed material.">
+              </div>
+              <figcaption>Input / generated / reconstructed</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-third-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="triplet-images">
+                <img src="assets/original/i2v/AdobeStock_80744260_input.jpg" alt="Input material image.">
+                <img src="assets/original/i2v/AdobeStock_80744260_generated.jpg" alt="Generated video frame.">
+                <img src="assets/original/i2v/AdobeStock_80744260_reconstructed.jpg" alt="Reconstructed material.">
+              </div>
+              <figcaption>Input / generated / reconstructed</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-third-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="triplet-images">
+                <img src="assets/original/i2v/Cartoon_style_orange_desert_topographic_seed5_input.jpg" alt="Input material image.">
+                <img src="assets/original/i2v/Cartoon_style_orange_desert_topographic_seed5_generated.jpg" alt="Generated video frame.">
+                <img src="assets/original/i2v/Cartoon_style_orange_desert_topographic_seed5_reconstructed.jpg" alt="Reconstructed material.">
+              </div>
+              <figcaption>Input / generated / reconstructed</figcaption>
+            </figure>
+          </div>
         </div>
-        <img class="rounded-media" src="assets/samples/tileable_projection.jpg"
-             alt="Tileable material projection examples.">
+
+        <h3 class="title is-4">Reconstruction Results</h3>
+        <div class="columns is-multiline material-pairs">
+          <div class="column is-one-quarter-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/recon/corrugated_metal_reconstruction.jpg" alt="Corrugated metal reconstruction.">
+                <img src="assets/original/recon/corrugated_metal_curved.jpg" alt="Corrugated metal on curved geometry.">
+              </div>
+              <figcaption>Corrugated metal</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-quarter-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/recon/green_leaves_reconstruction.jpg" alt="Green leaves reconstruction.">
+                <img src="assets/original/recon/green_leaves_curved.jpg" alt="Green leaves on curved geometry.">
+              </div>
+              <figcaption>Green leaves</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-quarter-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/recon/tufted_leather_reconstruction.jpg" alt="Tufted leather reconstruction.">
+                <img src="assets/original/recon/tufted_leather_curved.jpg" alt="Tufted leather on curved geometry.">
+              </div>
+              <figcaption>Tufted leather</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-quarter-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/recon/animal_fur_reconstruction.jpg" alt="Animal fur reconstruction.">
+                <img src="assets/original/recon/animal_fur_curved.jpg" alt="Animal fur on curved geometry.">
+              </div>
+              <figcaption>Dense animal fur</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-quarter-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/recon/croissant_reconstruction.jpg" alt="Croissant reconstruction.">
+                <img src="assets/original/recon/croissant_curved.jpg" alt="Croissant material on curved geometry.">
+              </div>
+              <figcaption>Chocolate croissant</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-quarter-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/recon/tufa_stone_reconstruction.jpg" alt="Tufa stone reconstruction.">
+                <img src="assets/original/recon/tufa_stone_curved.jpg" alt="Tufa stone on curved geometry.">
+              </div>
+              <figcaption>Pitted tufa stone</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-quarter-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/recon/black_white_carpet_reconstruction.jpg" alt="Black white carpet reconstruction.">
+                <img src="assets/original/recon/black_white_carpet_curved.jpg" alt="Black white carpet on curved geometry.">
+              </div>
+              <figcaption>Black white carpet</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-quarter-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/recon/reindeer_moss_reconstruction.jpg" alt="Reindeer moss reconstruction.">
+                <img src="assets/original/recon/reindeer_moss_curved.jpg" alt="Reindeer moss on curved geometry.">
+              </div>
+              <figcaption>Reindeer moss lichen</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <h3 class="title is-4">Qualitative Comparison</h3>
+        <div class="columns is-multiline comparison-grid">
+          <div class="column is-one-third-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/comparison/gnm_green_moss_gnm.jpg" alt="GNM green moss baseline.">
+                <img src="assets/original/comparison/gnm_green_moss_ours.jpg" alt="VideoNeuMat green moss result.">
+              </div>
+              <figcaption>GNM / Ours</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-third-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/comparison/realmat_leather_realmat.jpg" alt="RealMat leather baseline.">
+                <img src="assets/original/comparison/realmat_leather_ours.jpg" alt="VideoNeuMat leather result.">
+              </div>
+              <figcaption>RealMat / Ours</figcaption>
+            </figure>
+          </div>
+          <div class="column is-one-third-desktop is-half-tablet">
+            <figure class="result-card">
+              <div class="paired-images">
+                <img src="assets/original/comparison/rf_stone_rf.jpg" alt="RFMaterial stone baseline.">
+                <img src="assets/original/comparison/rf_stone_ours.jpg" alt="VideoNeuMat stone result.">
+              </div>
+              <figcaption>RFMaterial / Ours</figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <section class="section" id="downloads">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Downloads</h2>
-        <div class="content has-text-justified">
-          <p>
-            The PDFs linked here are web-optimized for GitHub Pages. For the final public release,
-            host full-resolution PDFs using GitHub Releases, institutional storage, or another
-            stable URL and update the links above.
-          </p>
-        </div>
         <div class="publication-links has-text-centered">
           <span class="link-block">
             <a href="assets/paper_web.pdf" class="external-link button is-normal is-rounded is-dark">
@@ -394,7 +439,6 @@
   </div>
 </section>
 
-
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -406,7 +450,6 @@
 }</code></pre>
   </div>
 </section>
-
 
 <footer class="footer">
   <div class="container">
@@ -428,28 +471,11 @@
             <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
               Creative Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
-          <p>
-            Please replace placeholder links, code release status, and web-optimized PDFs with
-            final public release URLs before publication.
-          </p>
         </div>
       </div>
     </div>
   </div>
 </footer>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var burger = document.querySelector('.navbar-burger');
-    var menu = document.querySelector('.navbar-menu');
-    if (burger && menu) {
-      burger.addEventListener('click', function () {
-        burger.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
-      });
-    }
-  });
-</script>
 
 </body>
 </html>

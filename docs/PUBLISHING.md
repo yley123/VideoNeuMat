@@ -15,10 +15,10 @@ The page layout is adapted from the Nerfies project page template. Keep the foot
 ## Files
 
 - `index.html`: the project page.
-- `assets/neumat_overview.mp4`: compressed web version of `NeuMat_SIG26.mp4`.
+- `assets/neumat_overview.mp4`: 1080p web version of `NeuMat_SIG26.mp4`, trimmed to 00:06-02:36.
 - `assets/paper_web.pdf`: web-optimized PDF derived from the local paper PDF.
 - `assets/supplementary_web.pdf`: web-optimized PDF derived from `supplementary_v2/supplementary_v2.pdf`.
-- `assets/samples/`: compressed teaser and result images.
+- `assets/original/`: web images rendered or copied from the paper's original figure sources.
 
 The original paper PDF and original supplementary PDF are much larger. For the final public page, host the full-resolution PDFs as GitHub Releases, institutional storage, or another stable URL, then replace the corresponding links in `index.html`.
 

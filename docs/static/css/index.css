@@ -2,6 +2,10 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.navbar {
+  font-family: 'Google Sans', sans-serif;
+}
+
 .footer .icon-link {
   font-size: 25px;
   color: #000;
@@ -18,43 +22,14 @@ body {
   font-variant: small-caps;
 }
 
-.teaser .hero-body {
-  padding-top: 0;
-  padding-bottom: 3rem;
-}
-
-.teaser {
-  font-family: 'Google Sans', sans-serif;
-}
-
-.teaser video {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.publication-banner {
-  max-height: parent;
-  margin: 1rem 0 2rem;
-}
-
-.publication-banner img,
-.rounded-media {
-  width: 100%;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-}
-
-.publication-title {
-  font-family: 'Google Sans', sans-serif;
-}
-
-.publication-authors {
+.publication-title,
+.publication-authors,
+.publication-venue {
   font-family: 'Google Sans', sans-serif;
 }
 
 .publication-venue {
   color: #555;
-  font-family: 'Google Sans', sans-serif;
   font-weight: bold;
 }
 
@@ -70,13 +45,46 @@ body {
   display: inline-block;
 }
 
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 2.5rem;
+}
+
+.teaser-figure {
+  margin: 0 auto 1rem;
+  width: min(100%, 1200px);
+}
+
+.teaser-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.publication-banner {
+  margin: 1rem 0 2rem;
+}
+
+.publication-banner img,
+.rounded-media {
+  display: block;
+  width: 100%;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+}
+
 .publication-video {
   position: relative;
   width: 100%;
   height: 0;
   padding-bottom: 56.25%;
   overflow: hidden;
-  border-radius: 10px !important;
+  border-radius: 6px !important;
+  background: #000;
 }
 
 .publication-video iframe,
@@ -88,50 +96,79 @@ body {
   height: 100%;
 }
 
-.results-carousel {
-  display: flex;
-  gap: 10px;
+.video-note {
+  color: #666;
+  font-size: 0.95rem;
+  margin-top: 0.7rem;
+}
+
+.section h3.title {
+  margin-top: 2.25rem;
+}
+
+.result-table {
   overflow-x: auto;
-  overflow-y: hidden;
-  scroll-snap-type: x mandatory;
+  margin-bottom: 1.5rem;
   padding-bottom: 0.25rem;
 }
 
-.results-carousel .item {
-  flex: 0 0 min(420px, 82vw);
-  margin: 5px;
-  overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
-  padding: 0;
-  font-size: 0;
-  scroll-snap-align: start;
-  background: #fff;
+.result-row {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(118px, 1fr));
+  gap: 2px;
+  min-width: 780px;
+  margin-bottom: 2px;
 }
 
-.results-carousel img,
-.results-carousel video {
+.result-header {
+  margin-bottom: 0.35rem;
+}
+
+.result-header span {
+  color: #555;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.result-row img {
   width: 100%;
-  height: 100%;
-  min-height: 250px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  margin: 0;
+  background: #fff;
 }
 
 .result-card {
   overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
   background: #fff;
+}
+
+.result-card figcaption {
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  padding: 0.55rem 0.7rem;
+  text-align: center;
+}
+
+.triplet-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #cfcfcf;
 }
 
 .paired-images {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1px;
-  background: #bbb;
+  background: #cfcfcf;
 }
 
+.triplet-images img,
 .paired-images img {
   width: 100%;
   aspect-ratio: 1 / 1;
@@ -139,35 +176,27 @@ body {
   background: #fff;
 }
 
-.result-card p {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  margin: 0;
-  padding: 0.7rem 0.8rem;
-  font-size: 0.95rem;
-}
-
-.result-card span {
-  color: #777;
-  white-space: nowrap;
-}
-
 pre {
-  border-radius: 10px;
+  border-radius: 6px;
 }
 
 @media screen and (max-width: 768px) {
   .publication-title {
-    font-size: 2.15rem !important;
+    font-size: 2.05rem !important;
   }
 
-  .result-card p {
-    display: block;
+  .hero-body {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .result-card span {
-    display: block;
-    margin-top: 0.25rem;
+  .result-row {
+    grid-template-columns: repeat(6, minmax(96px, 1fr));
+    min-width: 650px;
+  }
+
+  .result-header span,
+  .result-card figcaption {
+    font-size: 0.82rem;
   }
 }
