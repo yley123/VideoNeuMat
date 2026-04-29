@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="VideoNeuMat extracts reusable neural material assets from generative video models.">
+  <meta name="keywords" content="VideoNeuMat, neural materials, material generation, video diffusion, reflectance">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VideoNeuMat: Neural Material Extraction from Generative Video Models</title>
+
+  <!-- Google Analytics: replace G-XXXXXXXXXX with this project's GA4 Measurement ID. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="#">
+      <span class="icon">
+        <i class="fas fa-home"></i>
+      </span>
+    </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Project
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="#abstract">Abstract</a>
+          <a class="navbar-item" href="#method">Method</a>
+          <a class="navbar-item" href="#video">Video</a>
+          <a class="navbar-item" href="#results">Results</a>
+          <a class="navbar-item" href="#BibTeX">BibTeX</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">VideoNeuMat: Neural Material Extraction from Generative Video Models</h1>
+          <h2 class="subtitle is-4 publication-venue">SIGGRAPH 2026</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="mailto:bowen.xue@manchester.ac.uk">Bowen Xue</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              <a href="mailto:shadadan@nvidia.com">Saeed Hadadan</a><sup>2,*</sup>,</span>
+            <span class="author-block">
+              <a href="mailto:zhengzeng@ucsb.edu">Zheng Zeng</a><sup>3,2</sup>,</span>
+            <span class="author-block">
+              <a href="mailto:frousselle@nvidia.com">Fabrice Rousselle</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="mailto:zahra.montazeri@manchester.ac.uk">Zahra Montazeri</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="mailto:milos.hasan@gmail.com">Milo&scaron; Ha&scaron;an</a><sup>2</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Manchester,</span>
+            <span class="author-block"><sup>2</sup>NVIDIA,</span>
+            <span class="author-block"><sup>3</sup>University of California Santa Barbara</span>
+          </div>
+          <div class="is-size-6 publication-authors">
+            <span class="author-block"><sup>*</sup>Equal contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="assets/paper_web.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="assets/supplementary_web.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-lines"></i>
+                  </span>
+                  <span>Supplementary</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#video"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#BibTeX"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-doi"></i>
+                  </span>
+                  <span>BibTeX</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <span class="button is-normal is-rounded is-dark is-static">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline poster="assets/neumat_poster.jpg">
+        <source src="assets/neumat_overview.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">VideoNeuMat</span> turns generative material videos into reusable neural 3D assets.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <img src="assets/samples/teaser_leather.jpg"
+               alt="Pebble-grain leather neural material rendered on cloth.">
+        </div>
+        <div class="item">
+          <img src="assets/samples/teaser_dragon.jpg"
+               alt="Embroidered dragon neural material rendered on cloth.">
+        </div>
+        <div class="item">
+          <img src="assets/samples/teaser_jute.jpg"
+               alt="Jute neural material rendered on cloth.">
+        </div>
+        <div class="item">
+          <img src="assets/samples/tileable_projection.jpg"
+               alt="Tileable material projection examples.">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Creating photorealistic materials for 3D rendering requires exceptional artistic skill.
+            Generative models for materials could help, but are currently limited by the lack of
+            high-quality training data. While recent video generative models effortlessly produce
+            realistic material appearances, this knowledge remains entangled with geometry and lighting.
+          </p>
+          <p>
+            We present <span class="dnerf">VideoNeuMat</span>, a two-stage pipeline that extracts
+            reusable neural material assets from video diffusion models. First, we finetune a large
+            video model (Wan 2.1 14B) to generate material sample videos under controlled camera and
+            lighting trajectories, effectively creating a virtual gonioreflectometer that preserves
+            the model's material realism while learning a structured measurement pattern.
+          </p>
+          <p>
+            Second, we reconstruct compact neural materials from these videos through a Large
+            Reconstruction Model (LRM) finetuned from a smaller Wan 1.3B video backbone. From 17
+            generated video frames, our LRM performs single-pass inference to predict neural material
+            parameters that generalize to novel viewing and lighting conditions.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered" id="video">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video local-video">
+          <video controls playsinline preload="metadata" poster="assets/neumat_poster.jpg">
+            <source src="assets/neumat_overview.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="method">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            <span class="dnerf">VideoNeuMat</span> first adapts a video diffusion model into a
+            structured material-video generator, then distills the generated measurements into a
+            compact neural material representation that supports rendering under new views and lights.
+          </p>
+        </div>
+        <div class="publication-banner">
+          <img src="assets/pipeline.jpg"
+               alt="Two-stage VideoNeuMat pipeline.">
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Virtual Gonioreflectometer</h2>
+          <p>
+            A Wan 2.1 14B video model is finetuned to generate material videos under controlled
+            camera and light trajectories, making its material prior observable through a structured
+            measurement pattern.
+          </p>
+          <img class="rounded-media" src="assets/neumat_poster.jpg"
+               alt="Generated, reconstructed, and novel view material comparison.">
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 class="title is-3">Material LRM</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              A feed-forward LRM reconstructs neural material parameters from 17 generated frames,
+              producing assets that can be relit and applied to novel geometry.
+            </p>
+            <img class="rounded-media" src="assets/samples/teaser_dragon.jpg"
+                 alt="Recovered neural material on cloth with offset visualization.">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="results">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <div class="content has-text-justified">
+          <p>
+            The reconstructed neural materials preserve rich appearance detail while generalizing
+            from training views to novel views and lighting.
+          </p>
+        </div>
+
+        <div class="columns is-multiline results-grid">
+          <div class="column is-half">
+            <div class="result-card">
+              <div class="paired-images">
+                <img src="assets/samples/corroded_train.jpg"
+                     alt="Training view rendering of corroded steel.">
+                <img src="assets/samples/corroded_val.jpg"
+                     alt="Novel view rendering of corroded steel.">
+              </div>
+              <p>Corroded steel, salt deposits, rust <span>train / novel view</span></p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="result-card">
+              <div class="paired-images">
+                <img src="assets/samples/beeswax_train.jpg"
+                     alt="Training view rendering of beeswax.">
+                <img src="assets/samples/beeswax_val.jpg"
+                     alt="Novel view rendering of beeswax.">
+              </div>
+              <p>Beeswax with hexagonal cells <span>train / novel view</span></p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="result-card">
+              <div class="paired-images">
+                <img src="assets/samples/redrock_train.jpg"
+                     alt="Training view rendering of red rock cliff.">
+                <img src="assets/samples/redrock_val.jpg"
+                     alt="Novel view rendering of red rock cliff.">
+              </div>
+              <p>Red rock cliff <span>train / novel view</span></p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="result-card">
+              <div class="paired-images">
+                <img src="assets/samples/embroidery_train.jpg"
+                     alt="Training view rendering of embroidery.">
+                <img src="assets/samples/embroidery_val.jpg"
+                     alt="Novel view rendering of embroidery.">
+              </div>
+              <p>Contemporary machine embroidery <span>train / novel view</span></p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="title is-4">Tileable Materials</h3>
+        <div class="content has-text-justified">
+          <p>
+            VideoNeuMat also supports optional tileable material generation and projection.
+          </p>
+        </div>
+        <img class="rounded-media" src="assets/samples/tileable_projection.jpg"
+             alt="Tileable material projection examples.">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="downloads">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Downloads</h2>
+        <div class="content has-text-justified">
+          <p>
+            The PDFs linked here are web-optimized for GitHub Pages. For the final public release,
+            host full-resolution PDFs using GitHub Releases, institutional storage, or another
+            stable URL and update the links above.
+          </p>
+        </div>
+        <div class="publication-links has-text-centered">
+          <span class="link-block">
+            <a href="assets/paper_web.pdf" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fas fa-file-pdf"></i></span>
+              <span>Paper PDF</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="assets/supplementary_web.pdf" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fas fa-file-lines"></i></span>
+              <span>Supplementary</span>
+            </a>
+          </span>
+          <span class="link-block">
+            <a href="assets/neumat_overview.mp4" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon"><i class="fas fa-video"></i></span>
+              <span>Video MP4</span>
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{xue2026videoneumat,
+  author  = {Xue, Bowen and Hadadan, Saeed and Zeng, Zheng and Rousselle, Fabrice and Montazeri, Zahra and Hasan, Milos},
+  title   = {VideoNeuMat: Neural Material Extraction from Generative Video Models},
+  journal = {ACM Transactions on Graphics (SIGGRAPH)},
+  year    = {2026},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link" href="assets/paper_web.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="#BibTeX">
+        <i class="fas fa-quote-right"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website template is adapted from the
+            <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page</a>,
+            which is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+              Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Please replace placeholder links, code release status, and web-optimized PDFs with
+            final public release URLs before publication.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var burger = document.querySelector('.navbar-burger');
+    var menu = document.querySelector('.navbar-menu');
+    if (burger && menu) {
+      burger.addEventListener('click', function () {
+        burger.classList.toggle('is-active');
+        menu.classList.toggle('is-active');
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
