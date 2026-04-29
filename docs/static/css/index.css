@@ -110,12 +110,6 @@ body {
   margin-bottom: 2px;
 }
 
-.result-row.i2t-row {
-  align-items: end;
-  grid-template-columns: minmax(150px, 0.85fr) repeat(2, minmax(190px, 1.15fr));
-  min-width: 620px;
-}
-
 .result-header {
   margin-bottom: 0.35rem;
 }
@@ -135,10 +129,6 @@ body {
   background: #fff;
 }
 
-.result-row.i2t-row img.i2t-result {
-  aspect-ratio: 4 / 3;
-}
-
 .result-card {
   overflow: hidden;
   border: 1px solid #cfcfcf;
@@ -152,6 +142,41 @@ body {
   line-height: 1.35;
   padding: 0.55rem 0.7rem;
   text-align: center;
+}
+
+.i2t-labels,
+.i2t-images {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) repeat(2, minmax(0, 1.15fr));
+  gap: 1px;
+}
+
+.i2t-labels {
+  color: #555;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding-bottom: 0.35rem;
+  text-align: center;
+}
+
+.i2t-images {
+  align-items: end;
+  background: #cfcfcf;
+}
+
+.i2t-images img {
+  width: 100%;
+  object-fit: cover;
+  background: #fff;
+}
+
+.i2t-images .i2t-input {
+  aspect-ratio: 1 / 1;
+}
+
+.i2t-images .i2t-result {
+  aspect-ratio: 4 / 3;
 }
 
 .triplet-images {
@@ -195,13 +220,9 @@ pre {
     min-width: 650px;
   }
 
-  .result-row.i2t-row {
-    grid-template-columns: minmax(110px, 0.85fr) repeat(2, minmax(145px, 1.15fr));
-    min-width: 420px;
-  }
-
   .result-header span,
-  .result-card figcaption {
+  .result-card figcaption,
+  .i2t-labels {
     font-size: 0.82rem;
   }
 }

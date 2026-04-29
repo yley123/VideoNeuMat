@@ -85,7 +85,7 @@
 
           <div class="publication-links">
             <span class="link-block">
-              <a href="assets/paper_web.pdf"
+                <a href="https://github.com/bowenxueai/VideoNeuMat/releases/download/full-resolution/VideoNeuMat_SIG_2026_full_resolution.pdf"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon"><i class="fas fa-file-pdf"></i></span>
                 <span>Paper</span>
@@ -317,21 +317,34 @@
         </div>
 
         <h3 class="title is-4">Single Image to Material</h3>
-        <div class="result-table">
-          <div class="result-row result-header i2t-row">
-            <span>Input</span>
-            <span>Ours Full</span>
-            <span>GT</span>
+        <div class="columns is-multiline i2t-samples">
+          <div class="column is-half">
+            <figure class="result-card">
+              <div class="i2t-labels">
+                <span>Input</span>
+                <span>Ours Full</span>
+                <span>GT</span>
+              </div>
+              <div class="i2t-images">
+                <img class="i2t-input" src="assets/original/i2t_paper/scifi_input.jpg" alt="Sci-fi panel input.">
+                <img class="i2t-result" src="assets/original/i2t_paper/scifi_our_full.jpg" alt="VideoNeuMat full result for sci-fi panel.">
+                <img class="i2t-result" src="assets/original/i2t_paper/scifi_gt.jpg" alt="Ground truth sci-fi panel.">
+              </div>
+            </figure>
           </div>
-          <div class="result-row i2t-row">
-            <img class="i2t-input" src="assets/original/i2t_paper/scifi_input.jpg" alt="Sci-fi panel input.">
-            <img class="i2t-result" src="assets/original/i2t_paper/scifi_our_full.jpg" alt="VideoNeuMat full result for sci-fi panel.">
-            <img class="i2t-result" src="assets/original/i2t_paper/scifi_gt.jpg" alt="Ground truth sci-fi panel.">
-          </div>
-          <div class="result-row i2t-row">
-            <img class="i2t-input" src="assets/original/i2t_paper/rubble_input.jpg" alt="Rubble wall input.">
-            <img class="i2t-result" src="assets/original/i2t_paper/rubble_our_full.jpg" alt="VideoNeuMat full result for rubble wall.">
-            <img class="i2t-result" src="assets/original/i2t_paper/rubble_gt.jpg" alt="Ground truth rubble wall.">
+          <div class="column is-half">
+            <figure class="result-card">
+              <div class="i2t-labels">
+                <span>Input</span>
+                <span>Ours Full</span>
+                <span>GT</span>
+              </div>
+              <div class="i2t-images">
+                <img class="i2t-input" src="assets/original/i2t_paper/rubble_input.jpg" alt="Rubble wall input.">
+                <img class="i2t-result" src="assets/original/i2t_paper/rubble_our_full.jpg" alt="VideoNeuMat full result for rubble wall.">
+                <img class="i2t-result" src="assets/original/i2t_paper/rubble_gt.jpg" alt="Ground truth rubble wall.">
+              </div>
+            </figure>
           </div>
         </div>
       </div>
@@ -346,7 +359,7 @@
         <h2 class="title is-3">Downloads</h2>
         <div class="publication-links has-text-centered">
           <span class="link-block">
-            <a href="assets/paper_web.pdf" class="external-link button is-normal is-rounded is-dark">
+            <a href="https://github.com/bowenxueai/VideoNeuMat/releases/download/full-resolution/VideoNeuMat_SIG_2026_full_resolution.pdf" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="fas fa-file-pdf"></i></span>
               <span>Paper PDF</span>
             </a>
@@ -384,7 +397,7 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link" href="assets/paper_web.pdf">
+      <a class="icon-link" href="https://github.com/bowenxueai/VideoNeuMat/releases/download/full-resolution/VideoNeuMat_SIG_2026_full_resolution.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
       <a class="icon-link" href="#BibTeX">
@@ -395,11 +408,9 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website template is adapted from the
-            <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page</a>,
-            which is licensed under a
-            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-              Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            Thanks to the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies project page</a>
+            template, licensed under
+            <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
           </p>
         </div>
       </div>
