@@ -1,15 +1,40 @@
-# VideoNeuMat Project Page
+# VideoNeuMat
 
-This repository contains the GitHub Pages project website for:
+**Neural Material Extraction from Generative Video Models**<br>
+SIGGRAPH 2026
 
-**VideoNeuMat: Neural Material Extraction from Generative Video Models**
+<p align="center">
+  <a href="https://bowenxueai.github.io/VideoNeuMat/">Project Page</a> |
+  <a href="https://github.com/bowenxueai/VideoNeuMat/releases/download/full-resolution/VideoNeuMat_SIG_2026_full_resolution.pdf">Paper</a> |
+  <a href="https://bowenxueai.github.io/VideoNeuMat/assets/supplementary_web.pdf">Supplementary</a> |
+  <a href="https://bowenxueai.github.io/VideoNeuMat/assets/neumat_overview.mp4">Video</a>
+</p>
 
-The website lives in `docs/` and can be published through GitHub Pages by selecting:
+![VideoNeuMat teaser](docs/assets/original/teaser_hero.jpg)
 
-- Source: Deploy from a branch
-- Branch: `main`
-- Folder: `/docs`
+VideoNeuMat extracts reusable neural material assets from generative video models. The project page is published from `docs/`.
 
-See `docs/PUBLISHING.md` for publishing notes.
+## Code
 
-The `code/` directory is a placeholder for the project implementation.
+The implementation placeholder lives in [`code/`](code/). The public code release will be added there.
+
+## Repository Layout
+
+- `docs/`: GitHub Pages project website.
+- `docs/assets/`: Web assets, PDFs, teaser images, figures, and video.
+- `code/`: Placeholder for the project implementation.
+
+## Citation
+
+```bibtex
+@article{xue2026videoneumat,
+  author  = {Xue, Bowen and Hadadan, Saeed and Zeng, Zheng and Rousselle, Fabrice and Montazeri, Zahra and Hasan, Milos},
+  title   = {VideoNeuMat: Neural Material Extraction from Generative Video Models},
+  journal = {ACM Transactions on Graphics (SIGGRAPH)},
+  year    = {2026},
+}
+```
+
+## Website Notes
+
+See [`docs/PUBLISHING.md`](docs/PUBLISHING.md) for GitHub Pages publishing notes.

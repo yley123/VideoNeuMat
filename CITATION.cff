@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+title: "VideoNeuMat: Neural Material Extraction from Generative Video Models"
+message: "If you use VideoNeuMat, please cite the paper."
+type: article
+authors:
+  - family-names: Xue
+    given-names: Bowen
+  - family-names: Hadadan
+    given-names: Saeed
+  - family-names: Zeng
+    given-names: Zheng
+  - family-names: Rousselle
+    given-names: Fabrice
+  - family-names: Montazeri
+    given-names: Zahra
+  - family-names: Hasan
+    given-names: Milos
+year: 2026
+preferred-citation:
+  type: article
+  title: "VideoNeuMat: Neural Material Extraction from Generative Video Models"
+  authors:
+    - family-names: Xue
+      given-names: Bowen
+    - family-names: Hadadan
+      given-names: Saeed
+    - family-names: Zeng
+      given-names: Zheng
+    - family-names: Rousselle
+      given-names: Fabrice
+    - family-names: Montazeri
+      given-names: Zahra
+    - family-names: Hasan
+      given-names: Milos
+  journal: "ACM Transactions on Graphics (SIGGRAPH)"
+  year: 2026
