@@ -110,6 +110,11 @@ body {
   margin-bottom: 2px;
 }
 
+.result-row.i2t-row {
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  min-width: 620px;
+}
+
 .result-header {
   margin-bottom: 0.35rem;
 }
@@ -183,6 +188,11 @@ pre {
   .result-row {
     grid-template-columns: repeat(6, minmax(96px, 1fr));
     min-width: 650px;
+  }
+
+  .result-row.i2t-row {
+    grid-template-columns: repeat(3, minmax(120px, 1fr));
+    min-width: 390px;
   }
 
   .result-header span,
