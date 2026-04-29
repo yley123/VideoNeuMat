@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="description"
@@ -13,17 +13,90 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bowenxueai.github.io/VideoNeuMat/">
   <meta property="og:image" content="https://bowenxueai.github.io/VideoNeuMat/assets/original/teaser_hero.jpg">
+  <meta property="og:site_name" content="VideoNeuMat">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "VideoNeuMat: Neural Material Extraction from Generative Video Models",
+    "headline": "VideoNeuMat: Neural Material Extraction from Generative Video Models",
+    "url": "https://bowenxueai.github.io/VideoNeuMat/",
+    "image": "https://bowenxueai.github.io/VideoNeuMat/assets/original/teaser_hero.jpg",
+    "datePublished": "2026",
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "name": "ACM SIGGRAPH 2026"
+    },
+    "codeRepository": "https://github.com/bowenxueai/VideoNeuMat",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Bowen Xue",
+        "url": "https://bowenxueai.github.io/",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Manchester"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Saeed Hadadan",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "NVIDIA"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zheng Zeng",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of California Santa Barbara"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Fabrice Rousselle",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "NVIDIA"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Zahra Montazeri",
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "University of Manchester"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Milos Hasan",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "NVIDIA"
+        }
+      }
+    ]
+  }
+  </script>
   <title>VideoNeuMat: Neural Material Extraction from Generative Video Models</title>
 
-  <!-- Google Analytics: replace G-XXXXXXXXXX with this project's GA4 Measurement ID. -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
+    const GA_MEASUREMENT_ID = "";
+    if (GA_MEASUREMENT_ID) {
+      const gaScript = document.createElement("script");
+      gaScript.async = true;
+      gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+      document.head.appendChild(gaScript);
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", GA_MEASUREMENT_ID);
     }
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -63,7 +136,7 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="mailto:bowen.xue@manchester.ac.uk">Bowen Xue</a><sup>1,*</sup>,
+              <a href="https://bowenxueai.github.io/">Bowen Xue</a><sup>1,*</sup>,
             </span>
             <span class="author-block">
               <a href="mailto:shadadan@nvidia.com">Saeed Hadadan</a><sup>2,*</sup>,
