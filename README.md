@@ -34,7 +34,3 @@ The implementation placeholder lives in [`code/`](code/). The public code releas
   year    = {2026},
 }
 ```
-
-## Website Notes
-
-See [`docs/PUBLISHING.md`](docs/PUBLISHING.md) for GitHub Pages publishing notes.
