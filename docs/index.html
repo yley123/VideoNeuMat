@@ -271,9 +271,10 @@
         <h2 class="title is-3">Pipeline</h2>
         <div class="content has-text-justified">
           <p>
-            <span class="dnerf">VideoNeuMat</span> first adapts a video diffusion model into a
-            structured material-video generator, then distills the generated measurements into a
-            compact neural material representation for relighting and rendering on new geometry.
+            Our method has two stages. First, we finetune a video diffusion model into a virtual
+            gonioreflectometer that generates structured material videos from text or image prompts.
+            Second, a feed-forward LRM infers a NeuMIP-style material from 17 frames using a rendering
+            loss under novel views and lights. The resulting material supports relighting and novel shapes.
           </p>
         </div>
         <figure class="publication-banner">
