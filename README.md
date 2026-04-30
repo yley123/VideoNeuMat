@@ -13,8 +13,6 @@ SIGGRAPH 2026
 
 ![VideoNeuMat teaser](docs/assets/original/teaser_hero.jpg)
 
-VideoNeuMat extracts reusable neural material assets from generative video models. The project page is published from `docs/`.
-
 ## Code
 
 Coming soon.
