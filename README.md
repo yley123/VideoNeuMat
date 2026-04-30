@@ -17,13 +17,7 @@ VideoNeuMat extracts reusable neural material assets from generative video model
 
 ## Code
 
-The implementation placeholder lives in [`code/`](code/). The public code release will be added there.
-
-## Repository Layout
-
-- `docs/`: GitHub Pages project website.
-- `docs/assets/`: Web assets, PDFs, teaser images, figures, and video.
-- `code/`: Placeholder for the project implementation.
+Coming soon...
 
 ## Citation
 
