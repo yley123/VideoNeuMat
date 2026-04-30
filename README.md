@@ -20,10 +20,10 @@ Coming soon.
 ## Citation
 
 ```bibtex
-@article{xue2026videoneumat,
+@inproceedings{xue2026videoneumat,
   author  = {Xue, Bowen and Hadadan, Saeed and Zeng, Zheng and Rousselle, Fabrice and Montazeri, Zahra and Hasan, Milos},
   title   = {VideoNeuMat: Neural Material Extraction from Generative Video Models},
-  journal = {ACM Transactions on Graphics (SIGGRAPH)},
+  booktitle = {ACM SIGGRAPH 2026 Conference Papers},
   year    = {2026},
 }
 ```

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 title: "VideoNeuMat: Neural Material Extraction from Generative Video Models"
 message: "If you use VideoNeuMat, please cite the paper."
-type: article
+type: conference-paper
 authors:
   - family-names: Xue
     given-names: Bowen
@@ -17,7 +17,7 @@ authors:
     given-names: Milos
 year: 2026
 preferred-citation:
-  type: article
+  type: conference-paper
   title: "VideoNeuMat: Neural Material Extraction from Generative Video Models"
   authors:
     - family-names: Xue
@@ -32,5 +32,6 @@ preferred-citation:
       given-names: Zahra
     - family-names: Hasan
       given-names: Milos
-  journal: "ACM Transactions on Graphics (SIGGRAPH)"
+  conference: "ACM SIGGRAPH 2026"
+  collection-title: "ACM SIGGRAPH 2026 Conference Papers"
   year: 2026
