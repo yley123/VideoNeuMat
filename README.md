@@ -17,7 +17,7 @@ VideoNeuMat extracts reusable neural material assets from generative video model
 
 ## Code
 
-Coming soon...
+Coming soon.
 
 ## Citation
 
